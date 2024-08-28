@@ -1,3 +1,22 @@
+// class Mobile is created with the below given private attributes as a part of the code skeleton,
+
+// string mobileBrand
+// string mobileModelName
+// double mobilePrice
+// Include appropriate public getter and setter methods for the above variables. 
+
+//     string getMobileBrand()
+//     string getMobileModelName()
+//     double getMobilePrice()
+//     void setMobileBrand(string)
+//     void setMobileModelName(string)
+//     void setMobilePrice(double)
+// Write a main method to get the details from the user. Create an object for the Mobile class and set the values using the setter method. Then get the values using getters and display them as shown in the sample Input/Output.
+
+// Note: Use the same attribute names and methods as given in the question. Use camel case notation [mixed case with the first letter lowercase and with the first letter of each internal word capitalized, Example: mobilePrice] for methods and variables.
+
+// Note: Avoid the usage of exit(0) in your code.
+
 #include <iostream>
 using namespace std;
 
