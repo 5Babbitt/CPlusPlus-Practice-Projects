@@ -80,7 +80,7 @@ class Employee {    //DO NOT change the class name
 
         void calculateNetSalary(int pfpercentage)
         {
-            netSalary = salary - ( salary * pfpercentage ) / 100;
+            setNetSalary(salary - ( salary * pfpercentage ) / 100);
         }
 };
 
