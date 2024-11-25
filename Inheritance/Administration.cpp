@@ -16,11 +16,11 @@ class RuralManagement
         }
         void calcNoOfSchemes(int noOfSchemes,int noOfSchemesRejected)
         {
-          //Implement your code here
+            acceptedSchemes = noOfSchemes - noOfSchemesRejected;
         }
 };
  
-class RevenueManagement  
+class RevenueManagement: public RuralManagement
 {
     protected:
         double totalRevenue;
@@ -35,16 +35,18 @@ class RevenueManagement
         }
         void calcTotalRevenue(int noOfTerritoriess,double revenue)
         {
-           //Implement your code here
+           totalRevenue = noOfTerritoriess * revenue;
         }
 };
 
-class SchemeManagement   
+class SchemeManagement: public RevenueManagement
 {
     public:
         double allotMoneyPerScheme()
         {
-           //Implement your code here
+           double moneyPerScheme = totalRevenue/acceptedSchemes;
+
+           return moneyPerScheme;
         }
 };
 
@@ -62,5 +64,11 @@ int main()
     cout<<"Enter number of schemes rejected :"<<endl;
     cin>>rejected;
     //Implement your code here
+    SchemeManagement schemeManager;
+    schemeManager.calcNoOfSchemes(schemes, rejected);
+    schemeManager.calcTotalRevenue(territories, revenue);
+
+    cout << "Money allotted per scheme: " << schemeManager.allotMoneyPerScheme() << endl;
+
     return 0;
 }
