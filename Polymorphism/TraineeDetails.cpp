@@ -6,42 +6,48 @@ class Person {
         string socialSecurityNumber;
     public:
         //include getter and setter
-        void setSocialSecurityNumber(string ssn) {
-            socialSecurityNumber = ssn;
+        void setSocialSecurityNumber(string ssn) 
+        {
+            this->socialSecurityNumber = ssn;
         }
     
-        string getSocialSecurityNumber() {
-            return socialSecurityNumber;
+        string getSocialSecurityNumber() 
+        {
+            return this->socialSecurityNumber;
         }
 };
 
-class Student : public virtual Person
+class Student : virtual public Person
 {
     protected:
         int studentId;
     public:  
         //include getter and setter
-        void SetStudentID(int id) {
-            studentId = id;
+        void SetStudentId(int id) 
+        {
+            this->studentId = id;
         }
       
-        int getStudentID() {
-            return studentId;
+        int getStudentId() 
+        {
+            return this->studentId;
         }
 };
 
-class Employee : public virtual Person
+class Employee : virtual public Person
 {
     protected:
         int employeeId;
     public:
         //include getter and setter
-        void setEmployeeID(int id) {
-            employeeId = id;
+        void setEmployeeId(int id) 
+        {
+            this->employeeId = id;
         }
    
-        int getEmployeeID() {
-            return employeeId;
+        int getEmployeeId() 
+        {
+            return this->employeeId;
         }
 };
 
@@ -51,16 +57,19 @@ class Trainee : public Student, public Employee
         int traineeId;
     public:
         //include getter and setter
-        void setTraineeID(int id) {
-            traineeId = id;
+        void setTraineeId(int id) 
+        {
+            this->traineeId = id;
         }
        
-        int getTraineeID() {
-            return traineeId;
+        int getTraineeId() 
+        {
+            return this->traineeId;
         }
 };
 
-int main() {
+int main() 
+{
     Trainee trainee;
     
     string ssn;
@@ -70,10 +79,10 @@ int main() {
     cout<<"Enter SSN Number:";
     cin>>ssn;
    
-    trainee.setTraineeID(id);
+    trainee.setTraineeId(id);
     trainee.setSocialSecurityNumber(ssn);
     
-    cout << "Trainee ID: " << trainee.getTraineeID() << endl;
+    cout << "Trainee ID: " << trainee.getTraineeId() << endl;
     cout << "Social Security Number: " << trainee.getSocialSecurityNumber() << endl;
    
     //fill the code here
